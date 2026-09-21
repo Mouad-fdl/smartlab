@@ -15,10 +15,13 @@
   <style>
     * {
       -webkit-tap-highlight-color: transparent;
+      box-sizing: border-box;
     }
-    body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    html, body {
       background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
     .font-arabic {
       font-family: 'Noto Kufi Arabic', -apple-system, sans-serif;
@@ -34,7 +37,7 @@
     }
   </style>
 </head>
-<body class="bg-white text-slate-900 min-h-screen flex justify-center items-start sm:items-center p-0 sm:p-4 selection:bg-teal-600 selection:text-white relative">
+<body class="bg-white text-slate-900 min-h-screen flex justify-center items-center p-3 selection:bg-teal-600 selection:text-white relative">
 
   <!-- Toast Notification -->
   <div id="toast" class="fixed top-5 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 opacity-0 pointer-events-none transform -translate-y-4">
@@ -44,28 +47,28 @@
     </div>
   </div>
 
-  <!-- Mobile Viewport Container -->
-  <div class="w-full max-w-sm bg-white sm:rounded-[36px] sm:shadow-2xl sm:border sm:border-slate-200/80 px-6 pt-5 pb-6 flex flex-col">
+  <!-- Compact Card: Zero gap, strictly hugs content -->
+  <div class="w-full max-w-sm bg-white sm:rounded-[32px] sm:shadow-xl sm:border sm:border-slate-100 px-5 pt-3 pb-4 flex flex-col">
     
-    <!-- Official High-Resolution Logo -->
-    <div class="pt-1 pb-3 flex justify-center items-center">
-      <img src="https://mouad-fdl.github.io/smartlab/SmartLabLogo-Color-Horizntal.png" onerror="this.onerror=null; this.src='SmartLabLogo-Color-Horizntal.png';" alt="SMARTLAB مختبر التحاليل الذكية" class="h-13 sm:h-15 w-auto object-contain max-h-14">
+    <!-- 1. Official Logo -->
+    <div class="pt-1 pb-2 flex justify-center items-center">
+      <img src="SmartLabLogo-Color-Horizntal.png" onerror="this.onerror=null; this.src='https://mouad-fdl.github.io/smartlab/SmartLabLogo-Color-Horizntal.png';" alt="SMARTLAB مختبر التحاليل الذكية" class="h-12 sm:h-14 w-auto object-contain max-h-14">
     </div>
 
-    <!-- Doctor Official Arabic Title -->
-    <div class="text-center mb-5 pb-3 border-b border-slate-100" dir="rtl">
-      <h1 class="font-arabic text-2xl sm:text-[25px] font-black text-[#154956] tracking-tight leading-snug">
+    <!-- 2. Doctor Official Arabic Title -->
+    <div class="text-center mb-4 pb-2.5 border-b border-slate-100" dir="rtl">
+      <h1 class="font-arabic text-[21px] sm:text-[23px] font-black text-[#154956] tracking-tight leading-snug">
         د ياسين أفقير
       </h1>
-      <p class="font-arabic text-xs sm:text-[13px] font-bold text-slate-600 mt-0.5 leading-relaxed">
+      <p class="font-arabic text-[11px] sm:text-[12px] font-bold text-slate-600 mt-0.5 leading-relaxed">
         طبيب متخصص في التحاليل البيولوجية الطبية
       </p>
     </div>
 
-    <!-- Action Items List with Teal Circles -->
-    <div class="space-y-4">
+    <!-- 3. Action Items List with Teal Circles -->
+    <div class="space-y-3.5">
 
-      <!-- 1. TÉLÉPHONE FIXE (STANDARD) -->
+      <!-- Phone Fixe -->
       <a href="tel:+212537588358" class="flex items-center gap-4 group transition-transform active:scale-98">
         <div class="w-12 h-12 rounded-full teal-circle flex items-center justify-center text-white shrink-0 shadow-md shadow-teal-900/10 transition-all duration-200 group-hover:scale-105">
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -73,7 +76,7 @@
           </svg>
         </div>
         <div class="text-left">
-          <div class="text-lg font-bold text-black tracking-tight leading-none group-hover:text-[#1e8891] transition-colors">
+          <div class="text-base sm:text-lg font-bold text-black tracking-tight leading-none group-hover:text-[#1e8891] transition-colors">
             0537 58 83 58
           </div>
           <div class="text-[11px] text-slate-400 font-medium mt-1">
@@ -82,7 +85,7 @@
         </div>
       </a>
 
-      <!-- 2. WHATSAPP & MOBILE (AGRANDI) -->
+      <!-- WhatsApp & Mobile -->
       <a href="https://wa.me/212628501695?text=Bonjour%20Dr.%20Oufkir,%20je%20souhaite%20me%20renseigner%20sur%20vos%20analyses%20médicales%20au%20laboratoire%20Smartlab." target="_blank" class="flex items-center gap-4 group transition-transform active:scale-98">
         <div class="w-12 h-12 rounded-full teal-circle flex items-center justify-center text-white shrink-0 shadow-md shadow-teal-900/10 transition-all duration-200 group-hover:scale-105">
           <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
@@ -90,7 +93,7 @@
           </svg>
         </div>
         <div class="text-left">
-          <div class="text-lg font-bold text-black tracking-tight leading-none group-hover:text-[#1e8891] transition-colors">
+          <div class="text-base sm:text-lg font-bold text-black tracking-tight leading-none group-hover:text-[#1e8891] transition-colors">
             0628 50 16 95
           </div>
           <div class="text-[11px] text-slate-400 font-medium mt-1">
@@ -99,7 +102,7 @@
         </div>
       </a>
 
-      <!-- 3. EMAIL DIRECT -->
+      <!-- Email Direct -->
       <div onclick="handleEmailClick(event)" class="cursor-pointer flex items-center gap-4 group transition-transform active:scale-98">
         <div class="w-12 h-12 rounded-full teal-circle flex items-center justify-center text-white shrink-0 shadow-md shadow-teal-900/10 transition-all duration-200 group-hover:scale-105">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -107,7 +110,7 @@
           </svg>
         </div>
         <div class="text-left min-w-0 flex-1">
-          <div class="text-base font-bold text-black tracking-tight leading-tight truncate group-hover:text-[#1e8891] transition-colors flex items-center gap-2">
+          <div class="text-sm sm:text-base font-bold text-black tracking-tight leading-tight truncate group-hover:text-[#1e8891] transition-colors flex items-center gap-2">
             <span>dr.oufkir@biosmartlab.ma</span>
           </div>
           <div class="text-[11px] text-slate-400 font-medium mt-1 flex items-center gap-2">
@@ -117,7 +120,7 @@
         </div>
       </div>
 
-      <!-- 4. SITE WEB & RÉSULTATS -->
+      <!-- Site Web & Résultats -->
       <a href="https://www.biosmartlab.ma" target="_blank" class="flex items-center gap-4 group transition-transform active:scale-98">
         <div class="w-12 h-12 rounded-full teal-circle flex items-center justify-center text-white shrink-0 shadow-md shadow-teal-900/10 transition-all duration-200 group-hover:scale-105">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -125,7 +128,7 @@
           </svg>
         </div>
         <div class="text-left">
-          <div class="text-base font-bold text-black tracking-tight leading-none group-hover:text-[#1e8891] transition-colors">
+          <div class="text-base sm:text-lg font-bold text-black tracking-tight leading-none group-hover:text-[#1e8891] transition-colors">
             www.biosmartlab.ma
           </div>
           <div class="text-[11px] text-slate-400 font-medium mt-1">
@@ -134,7 +137,7 @@
         </div>
       </a>
 
-      <!-- 5. LOCALISATION DIRECTE GOOGLE MAPS -->
+      <!-- Localisation Directe Google Maps -->
       <a href="https://www.google.com/maps/search/?api=1&query=Laboratoire+Bio+Smart+Lab+Temara+Avenue+Moulay+Idriss+I" target="_blank" class="flex items-center gap-4 group transition-transform active:scale-98">
         <div class="w-12 h-12 rounded-full teal-circle flex items-center justify-center text-white shrink-0 shadow-md shadow-teal-900/10 transition-all duration-200 group-hover:scale-105">
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -142,7 +145,7 @@
           </svg>
         </div>
         <div class="text-left">
-          <div class="text-base font-bold text-black tracking-tight leading-tight group-hover:text-[#1e8891] transition-colors">
+          <div class="text-sm sm:text-base font-bold text-black tracking-tight leading-tight group-hover:text-[#1e8891] transition-colors">
             Avenue Moulay Idriss I, Témara
           </div>
           <div class="text-[11px] text-slate-400 font-medium mt-1">
@@ -153,9 +156,9 @@
 
     </div>
 
-    <!-- Bottom Signature -->
-    <div class="mt-5 pt-4 border-t border-slate-100 text-center" dir="rtl">
-      <div class="text-[12px] font-bold text-slate-600 font-arabic">
+    <!-- 4. Signature PLACÉE DIRECTEMENT SOUS LE DERNIER BOUTON -->
+    <div class="mt-4 pt-3 border-t border-slate-100 text-center" dir="rtl">
+      <div class="text-[11px] font-bold text-slate-600 font-arabic">
         مختبر التحاليل الطبية والبيولوجية • تمارة
       </div>
       <div class="text-[10px] text-slate-400 mt-0.5 font-medium">
