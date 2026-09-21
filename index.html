@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>SMARTLAB - د ياسين أفقير | مختبر التحالIL الطبية</title>
+  <title>SMARTLAB - د ياسين أفقير | مختبر التحاليل الطبية</title>
   <meta name="description" content="د ياسين أفقير - طبيب متخصص في التحاليل البيولوجية الطبية. مختبر SMARTLAB تمارة. هاتف: 0537 58 83 58 / 0628 50 16 95">
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -36,7 +36,7 @@
 </head>
 <body class="bg-white text-slate-900 min-h-screen flex justify-center items-start sm:items-center p-0 sm:p-4 selection:bg-teal-600 selection:text-white relative">
 
-  <!-- Toast Notification (Top floating) -->
+  <!-- Toast Notification -->
   <div id="toast" class="fixed top-5 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 opacity-0 pointer-events-none transform -translate-y-4">
     <div class="bg-slate-900 text-white text-xs font-semibold px-4 py-2.5 rounded-full shadow-2xl flex items-center gap-2 border border-slate-700">
       <span class="text-teal-400">✓</span>
@@ -45,129 +45,127 @@
   </div>
 
   <!-- Mobile Viewport Container -->
-  <div class="w-full max-w-sm min-h-screen sm:min-h-0 bg-white sm:rounded-[36px] sm:shadow-2xl sm:border sm:border-slate-200/80 px-7 py-8 flex flex-col justify-between">
+  <div class="w-full max-w-sm bg-white sm:rounded-[36px] sm:shadow-2xl sm:border sm:border-slate-200/80 px-6 pt-5 pb-6 flex flex-col">
     
-    <div>
-      <!-- Official High-Resolution Logo -->
-      <div class="pt-2 pb-5 flex justify-center items-center">
-        <img src="data:image/png;base64,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" alt="SMARTLAB مختبر التحاليل الذكية" class="h-14 sm:h-16 w-auto object-contain">
-      </div>
+    <!-- Official High-Resolution Logo -->
+    <div class="pt-1 pb-3 flex justify-center items-center">
+      <img src="https://mouad-fdl.github.io/smartlab/SmartLabLogo-Color-Horizntal.png" onerror="this.onerror=null; this.src='SmartLabLogo-Color-Horizntal.png';" alt="SMARTLAB مختبر التحاليل الذكية" class="h-13 sm:h-15 w-auto object-contain max-h-14">
+    </div>
 
-      <!-- Doctor Official Arabic Title -->
-      <div class="text-center mb-8 pb-5 border-b border-slate-100" dir="rtl">
-        <h1 class="font-arabic text-2xl sm:text-[26px] font-black text-[#154956] tracking-tight leading-snug">
-          د ياسين أفقير
-        </h1>
-        <p class="font-arabic text-xs sm:text-[13px] font-bold text-slate-600 mt-1 leading-relaxed">
-          طبيب متخصص في التحاليل البيولوجية الطبية
-        </p>
-      </div>
+    <!-- Doctor Official Arabic Title -->
+    <div class="text-center mb-5 pb-3 border-b border-slate-100" dir="rtl">
+      <h1 class="font-arabic text-2xl sm:text-[25px] font-black text-[#154956] tracking-tight leading-snug">
+        د ياسين أفقير
+      </h1>
+      <p class="font-arabic text-xs sm:text-[13px] font-bold text-slate-600 mt-0.5 leading-relaxed">
+        طبيب متخصص في التحاليل البيولوجية الطبية
+      </p>
+    </div>
 
-      <!-- Action Items List with Teal Circles -->
-      <div class="space-y-5">
+    <!-- Action Items List with Teal Circles -->
+    <div class="space-y-4">
 
-        <!-- 1. TÉLÉPHONE FIXE (STANDARD) -->
-        <a href="tel:+212537588358" class="flex items-center gap-4 group transition-transform active:scale-98">
-          <div class="w-12 h-12 rounded-full teal-circle flex items-center justify-center text-white shrink-0 shadow-md shadow-teal-900/10 transition-all duration-200 group-hover:scale-105">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-            </svg>
+      <!-- 1. TÉLÉPHONE FIXE (STANDARD) -->
+      <a href="tel:+212537588358" class="flex items-center gap-4 group transition-transform active:scale-98">
+        <div class="w-12 h-12 rounded-full teal-circle flex items-center justify-center text-white shrink-0 shadow-md shadow-teal-900/10 transition-all duration-200 group-hover:scale-105">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+        </div>
+        <div class="text-left">
+          <div class="text-lg font-bold text-black tracking-tight leading-none group-hover:text-[#1e8891] transition-colors">
+            0537 58 83 58
           </div>
-          <div class="text-left">
-            <div class="text-lg font-bold text-black tracking-tight leading-none group-hover:text-[#1e8891] transition-colors">
-              0537 58 83 58
-            </div>
-            <div class="text-[11px] text-slate-400 font-medium mt-1">
-              Standard Fixe du Laboratoire
-            </div>
-          </div>
-        </a>
-
-        <!-- 2. WHATSAPP & MOBILE -->
-        <a href="https://wa.me/212628501695?text=Bonjour%20Dr.%20Oufkir,%20je%20souhaite%20me%20renseigner%20sur%20vos%20analyses%20médicales%20au%20laboratoire%20Smartlab." target="_blank" class="flex items-center gap-4 group transition-transform active:scale-98">
-          <div class="w-12 h-12 rounded-full teal-circle flex items-center justify-center text-white shrink-0 shadow-md shadow-teal-900/10 transition-all duration-200 group-hover:scale-105">
-            <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
-              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.18 3.03 14.69 2 12.04 2zm0 1.67c2.2 0 4.26.86 5.82 2.42 1.56 1.56 2.41 3.63 2.41 5.83 0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.39-4.19-1.14l-.3-.18-3.12.82.83-3.04-.2-.32c-.82-1.3-1.26-2.82-1.26-4.38 0-4.54 3.7-8.24 8.25-8.24zm-3.51 3.66c-.16 0-.43.06-.65.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.57.13.16 1.75 2.66 4.23 3.73.59.26 1.05.41 1.41.53.59.19 1.12.16 1.55.1.47-.07 1.46-.6 1.67-1.19.2-.59.2-1.09.14-1.2-.06-.1-.22-.16-.46-.28s-1.41-.69-1.63-.77c-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.23-.12-1-.37-1.92-1.19-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.25-.29.37-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42s-.52-1.26-.71-1.72c-.19-.44-.38-.38-.52-.39-.14-.01-.3-.01-.46-.01z"/>
-            </svg>
-          </div>
-          <div class="text-left">
-            <div class="text-lg font-bold text-black tracking-tight leading-none group-hover:text-[#1e8891] transition-colors">
-              0628 50 16 95
-            </div>
-            <div class="text-[11px] text-slate-400 font-medium mt-1">
-              WhatsApp & Ligne Mobile
-            </div>
-          </div>
-        </a>
-
-        <!-- 3. EMAIL (SMART BULLETPROOF CLICK: MAILTO + GMAIL WEB + AUTO COPY) -->
-        <div onclick="handleEmailClick(event)" class="cursor-pointer flex items-center gap-4 group transition-transform active:scale-98">
-          <div class="w-12 h-12 rounded-full teal-circle flex items-center justify-center text-white shrink-0 shadow-md shadow-teal-900/10 transition-all duration-200 group-hover:scale-105">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <div class="text-left min-w-0 flex-1">
-            <div class="text-base font-bold text-black tracking-tight leading-tight truncate group-hover:text-[#1e8891] transition-colors flex items-center gap-2">
-              <span>dr.oufkir@biosmartlab.ma</span>
-            </div>
-            <div class="text-[11px] text-slate-400 font-medium mt-1 flex items-center gap-2">
-              <span>Courrier Électronique Officiel</span>
-              <span class="text-[10px] bg-slate-100 text-teal-700 px-1.5 py-0.2 rounded font-semibold">Cliquer pour écrire</span>
-            </div>
+          <div class="text-[11px] text-slate-400 font-medium mt-1">
+            Standard Fixe du Laboratoire
           </div>
         </div>
+      </a>
 
-        <!-- 4. SITE WEB & RÉSULTATS -->
-        <a href="https://www.biosmartlab.ma" target="_blank" class="flex items-center gap-4 group transition-transform active:scale-98">
-          <div class="w-12 h-12 rounded-full teal-circle flex items-center justify-center text-white shrink-0 shadow-md shadow-teal-900/10 transition-all duration-200 group-hover:scale-105">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
-            </svg>
+      <!-- 2. WHATSAPP & MOBILE (AGRANDI) -->
+      <a href="https://wa.me/212628501695?text=Bonjour%20Dr.%20Oufkir,%20je%20souhaite%20me%20renseigner%20sur%20vos%20analyses%20médicales%20au%20laboratoire%20Smartlab." target="_blank" class="flex items-center gap-4 group transition-transform active:scale-98">
+        <div class="w-12 h-12 rounded-full teal-circle flex items-center justify-center text-white shrink-0 shadow-md shadow-teal-900/10 transition-all duration-200 group-hover:scale-105">
+          <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01C17.18 3.03 14.69 2 12.04 2zm0 1.67c2.2 0 4.26.86 5.82 2.42 1.56 1.56 2.41 3.63 2.41 5.83 0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.39-4.19-1.14l-.3-.18-3.12.82.83-3.04-.2-.32c-.82-1.3-1.26-2.82-1.26-4.38 0-4.54 3.7-8.24 8.25-8.24zm-3.51 3.66c-.16 0-.43.06-.65.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.57.13.16 1.75 2.66 4.23 3.73.59.26 1.05.41 1.41.53.59.19 1.12.16 1.55.1.47-.07 1.46-.6 1.67-1.19.2-.59.2-1.09.14-1.2-.06-.1-.22-.16-.46-.28s-1.41-.69-1.63-.77c-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.23-.12-1-.37-1.92-1.19-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.25-.29.37-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42s-.52-1.26-.71-1.72c-.19-.44-.38-.38-.52-.39-.14-.01-.3-.01-.46-.01z"/>
+          </svg>
+        </div>
+        <div class="text-left">
+          <div class="text-lg font-bold text-black tracking-tight leading-none group-hover:text-[#1e8891] transition-colors">
+            0628 50 16 95
           </div>
-          <div class="text-left">
-            <div class="text-base font-bold text-black tracking-tight leading-none group-hover:text-[#1e8891] transition-colors">
-              www.biosmartlab.ma
-            </div>
-            <div class="text-[11px] text-slate-400 font-medium mt-1">
-              Portail Web & Résultats d'Analyses
-            </div>
+          <div class="text-[11px] text-slate-400 font-medium mt-1">
+            WhatsApp & Ligne Mobile
           </div>
-        </a>
+        </div>
+      </a>
 
-        <!-- 5. LOCALISATION DIRECTE GOOGLE MAPS -->
-        <a href="https://www.google.com/maps/search/?api=1&query=Laboratoire+Bio+Smart+Lab+Temara+Avenue+Moulay+Idriss+I" target="_blank" class="flex items-center gap-4 group transition-transform active:scale-98">
-          <div class="w-12 h-12 rounded-full teal-circle flex items-center justify-center text-white shrink-0 shadow-md shadow-teal-900/10 transition-all duration-200 group-hover:scale-105">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path fill-rule="evenodd" d="M11.54 22.351A2.42 2.42 0 0110 20.672c-.8-1.57-2.07-3.418-3.42-5.328C4.697 12.72 3 9.99 3 7.5A8.5 8.5 0 0111.5 0 8.5 8.5 0 0120 7.5c0 2.49-1.697 5.22-3.58 7.844-1.35 1.91-2.62 3.758-3.42 5.328a2.42 2.42 0 01-1.46 1.679zM11.5 11a3.5 3.5 0 100-7 3.5 3.5 0 000 7z" clip-rule="evenodd"/>
-            </svg>
+      <!-- 3. EMAIL DIRECT -->
+      <div onclick="handleEmailClick(event)" class="cursor-pointer flex items-center gap-4 group transition-transform active:scale-98">
+        <div class="w-12 h-12 rounded-full teal-circle flex items-center justify-center text-white shrink-0 shadow-md shadow-teal-900/10 transition-all duration-200 group-hover:scale-105">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <div class="text-left min-w-0 flex-1">
+          <div class="text-base font-bold text-black tracking-tight leading-tight truncate group-hover:text-[#1e8891] transition-colors flex items-center gap-2">
+            <span>dr.oufkir@biosmartlab.ma</span>
           </div>
-          <div class="text-left">
-            <div class="text-base font-bold text-black tracking-tight leading-tight group-hover:text-[#1e8891] transition-colors">
-              Avenue Moulay Idriss I, Témara
-            </div>
-            <div class="text-[11px] text-slate-400 font-medium mt-1">
-              Résidence Moulay Idriss (Massira 1)
-            </div>
+          <div class="text-[11px] text-slate-400 font-medium mt-1 flex items-center gap-2">
+            <span>Courrier Électronique Officiel</span>
+            <span class="text-[10px] bg-slate-100 text-teal-700 px-1.5 py-0.2 rounded font-semibold">Cliquer pour écrire</span>
           </div>
-        </a>
-
+        </div>
       </div>
+
+      <!-- 4. SITE WEB & RÉSULTATS -->
+      <a href="https://www.biosmartlab.ma" target="_blank" class="flex items-center gap-4 group transition-transform active:scale-98">
+        <div class="w-12 h-12 rounded-full teal-circle flex items-center justify-center text-white shrink-0 shadow-md shadow-teal-900/10 transition-all duration-200 group-hover:scale-105">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+          </svg>
+        </div>
+        <div class="text-left">
+          <div class="text-base font-bold text-black tracking-tight leading-none group-hover:text-[#1e8891] transition-colors">
+            www.biosmartlab.ma
+          </div>
+          <div class="text-[11px] text-slate-400 font-medium mt-1">
+            Portail Web & Résultats d'Analyses
+          </div>
+        </div>
+      </a>
+
+      <!-- 5. LOCALISATION DIRECTE GOOGLE MAPS -->
+      <a href="https://www.google.com/maps/search/?api=1&query=Laboratoire+Bio+Smart+Lab+Temara+Avenue+Moulay+Idriss+I" target="_blank" class="flex items-center gap-4 group transition-transform active:scale-98">
+        <div class="w-12 h-12 rounded-full teal-circle flex items-center justify-center text-white shrink-0 shadow-md shadow-teal-900/10 transition-all duration-200 group-hover:scale-105">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M11.54 22.351A2.42 2.42 0 0110 20.672c-.8-1.57-2.07-3.418-3.42-5.328C4.697 12.72 3 9.99 3 7.5A8.5 8.5 0 0111.5 0 8.5 8.5 0 0120 7.5c0 2.49-1.697 5.22-3.58 7.844-1.35 1.91-2.62 3.758-3.42 5.328a2.42 2.42 0 01-1.46 1.679zM11.5 11a3.5 3.5 0 100-7 3.5 3.5 0 000 7z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="text-left">
+          <div class="text-base font-bold text-black tracking-tight leading-tight group-hover:text-[#1e8891] transition-colors">
+            Avenue Moulay Idriss I, Témara
+          </div>
+          <div class="text-[11px] text-slate-400 font-medium mt-1">
+            Résidence Moulay Idriss (Massira 1)
+          </div>
+        </div>
+      </a>
+
     </div>
 
     <!-- Bottom Signature -->
-    <div class="pt-8 text-center" dir="rtl">
-      <div class="text-[11px] font-bold text-slate-500 font-arabic">
+    <div class="mt-5 pt-4 border-t border-slate-100 text-center" dir="rtl">
+      <div class="text-[12px] font-bold text-slate-600 font-arabic">
         مختبر التحاليل الطبية والبيولوجية • تمارة
       </div>
-      <div class="text-[10px] text-slate-400 mt-0.5">
+      <div class="text-[10px] text-slate-400 mt-0.5 font-medium">
         SMARTLAB • Biologie Médicale
       </div>
     </div>
 
   </div>
 
-  <!-- EMAIL MODAL OPTIONS (Universal for Desktop & Mobile) -->
+  <!-- EMAIL MODAL OPTIONS -->
   <div id="email-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
     <div class="bg-white rounded-3xl p-6 max-w-xs w-full text-center shadow-2xl border border-slate-100">
       <div class="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center mx-auto mb-3">
@@ -177,19 +175,16 @@
       <p class="text-xs text-slate-500 mt-0.5 mb-4 select-all font-semibold">dr.oufkir@biosmartlab.ma</p>
 
       <div class="space-y-2 text-xs font-bold">
-        <!-- 1. Open in Gmail Web -->
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dr.oufkir@biosmartlab.ma&su=Contact%20Laboratoire%20Smartlab" target="_blank" onclick="closeEmailModal()" class="w-full flex items-center justify-center gap-2 py-3 bg-red-600 hover:bg-red-500 text-white rounded-xl shadow-md transition">
           <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
           Ouvrir dans Gmail Web
         </a>
 
-        <!-- 2. Open Default Mail Client (Outlook / Apple Mail) -->
         <a href="mailto:dr.oufkir@biosmartlab.ma?subject=Contact%20Laboratoire%20Smartlab" onclick="closeEmailModal()" class="w-full flex items-center justify-center gap-2 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-xl shadow-md transition">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           Application Mail Locale
         </a>
 
-        <!-- 3. Copy Address -->
         <button onclick="copyAddressOnly()" class="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl transition">
           📋 Copier l'adresse email
         </button>
@@ -217,21 +212,16 @@
     }
 
     function handleEmailClick(e) {
-      // Always auto-copy email address to clipboard
       if (navigator.clipboard) {
         navigator.clipboard.writeText(TARGET_EMAIL).then(() => {
           showToast('✓ Email copié : ' + TARGET_EMAIL);
         }).catch(() => {});
       }
 
-      // Check if mobile device
       const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
       if (isMobile) {
-        // On mobile, trigger standard mailto directly (opens Gmail / Apple Mail)
         window.location.href = `mailto:${TARGET_EMAIL}?subject=Contact%20Laboratoire%20Smartlab`;
       } else {
-        // On Desktop (where mailto often has no default client configured), show the clean choice modal
         openEmailModal();
       }
     }
